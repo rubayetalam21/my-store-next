@@ -43,3 +43,4 @@ lerna-debug.log*
 # Optional: temporary files
 *.tmp
 *.temp
+.vercel
