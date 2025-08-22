@@ -49,7 +49,7 @@ export default function Home() {
       <section className="py-20 bg-gray-100 text-center px-6">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">Start Shopping Today</h2>
         <p className="text-gray-700 mb-6 max-w-xl mx-auto">
-          Browse our extensive catalog of electronics, office essentials, and lifestyle products tailored for you.
+          Browse our extensive catalog of electronics, office essentials, and lifestyle products tailored for your life.
         </p>
         <a
           href="/products"
