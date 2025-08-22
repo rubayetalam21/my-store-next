@@ -24,25 +24,30 @@ export default function ProductsPage() {
         {products.map((p) => (
           <li
             key={p._id}
-            className="bg-white border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col"
+            className="bg-gradient-to-br from-white via-gray-50 to-teal-50 border border-gray-200 rounded-2xl shadow-md hover:shadow-2xl transition-shadow duration-300 overflow-hidden flex flex-col"
           >
-            {/* Product Image */}
-            <div className="w-full h-64 relative">
+            {/* Product Image with overlay gradient */}
+            <div className="w-full h-64 relative group">
               <img
                 src={p.image || "/placeholder.png"}
                 alt={p.name}
-                className="w-full h-64 object-cover"
+                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
             </div>
 
             {/* Product Info */}
-            <div className="p-6 flex flex-col flex-1">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-2">{p.name}</h2>
+            <div className="p-6 flex flex-col flex-1 bg-gradient-to-r from-white via-teal-50 to-white">
+              <h2 className="text-2xl font-semibold text-gray-800 mb-2">
+                {p.name}
+              </h2>
               <p className="text-gray-600 flex-1">{p.description}</p>
-              <p className="text-gray-900 font-bold mt-4 text-lg">${p.price}</p>
+              <p className="text-gray-900 font-bold mt-4 text-lg">
+                ${p.price}
+              </p>
               <Link
                 href={`/products/${p._id}`}
-                className="mt-4 inline-block bg-teal-500 text-white text-center py-2 px-4 rounded-lg hover:bg-teal-600 transition-colors"
+                className="mt-4 inline-block bg-gradient-to-r from-teal-500 to-cyan-500 text-white text-center py-2 px-4 rounded-lg shadow hover:opacity-90 transition-all"
               >
                 View Details
               </Link>
